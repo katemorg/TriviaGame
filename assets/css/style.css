@@ -1,10 +1,10 @@
+* {
+	text-align: center;
+}
+
 img {
 	height: 300px;
 	width: 300px;
-}
-
-* {
-	text-align: center;
 }
 
 #questions {
@@ -13,4 +13,8 @@ img {
 
 .answer {
 	font-size: 18px;
+}
+
+.answer-select:hover {
+	opacity: 0.5;
 }

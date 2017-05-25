@@ -31,19 +31,19 @@ $(document).ready(function(){
 
 	function generateHTML() {
 		gameDisplay = "<p>Time Remaining: <span class='timer'>30</span></p> <h3 class='text-center' id='questions'>" + questionArray[questionCounter] + 
-					  "</h3><p class='first-answer answer'>" + answerArray[questionCounter][0] + 
-					  "</p><p class='answer'>" + answerArray[questionCounter][1] + 
-					  "</p><p class='answer'>" + answerArray[questionCounter][2] + 
-					  "</p><p class='answer'>" + answerArray[questionCounter][3] + "</p>";
+					  "</h3><p class='first-answer answer answer-select'>" + answerArray[questionCounter][0] + 
+					  "</p><p class='answer answer-select'>" + answerArray[questionCounter][1] + 
+					  "</p><p class='answer answer-select'>" + answerArray[questionCounter][2] + 
+					  "</p><p class='answer answer-select'>" + answerArray[questionCounter][3] + "</p>";
 		$("#mainDisplayArea").html(gameDisplay);
 	}
 
 	function endScreen() {
 		gameDisplay = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + 
-					  "</span></p><p class='text-center'>All done, here's how you did!</p>" + 
-					  "<p class='summary-correct'>Correct Answers: " + correctCount + 
-					  "</p><p>Wrong Answers: " + incorrectCount + 
-					  "</p><p>Unanswered: " + unansweredCount + "</p>" + 
+					  "</span></p><p class='text-center answer'>All done, here's how you did!</p>" + 
+					  "<p class='summary-correct answer'>Correct Answers: " + correctCount + 
+					  "</p><p class='answer'>Wrong Answers: " + incorrectCount + 
+					  "</p><p class='answer'>Unanswered: " + unansweredCount + "</p>" + 
 					  "<p class='text-center reset-button-container'><a class='btn btn-primary btn-lg btn-block reset-button' href='#' role='button'>Reset The Quiz!</a></p>";
 		$("#mainDisplayArea").html(gameDisplay);
 	}
@@ -51,7 +51,7 @@ $(document).ready(function(){
 	function timeOutLoss() {
 		unansweredCount++;
 		gameDisplay = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + 
-					  "</span></p><p class='text-center'>You ran out of time!  The correct answer was: " + correctAnswers[questionCounter] + 
+					  "</span></p><p class='text-center answer'>You ran out of time!  The correct answer was: " + correctAnswers[questionCounter] + 
 					  "</p>" + imageArray[questionCounter];
 		$("#mainDisplayArea").html(gameDisplay);
 		setTimeout(wait, 3000);
@@ -60,7 +60,7 @@ $(document).ready(function(){
 	function correctAnswerSelect() {
 		correctCount++;
 		gameDisplay = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + 
-					  "</span></p><p class='text-center'>Correct! The answer is: " + correctAnswers[questionCounter] + 
+					  "</span></p><p class='text-center answer'>Correct! The answer is: " + correctAnswers[questionCounter] + 
 					  "</p>"+ imageArray[questionCounter];
 		$("#mainDisplayArea").html(gameDisplay);
 		setTimeout(wait, 3000);
