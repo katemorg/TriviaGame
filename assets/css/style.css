@@ -1,0 +1,16 @@
+img {
+	height: 300px;
+	width: 300px;
+}
+
+* {
+	text-align: center;
+}
+
+#questions {
+	padding: 1em;
+}
+
+.answer {
+	font-size: 18px;
+}
